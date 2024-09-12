@@ -1,24 +1,152 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <title>Mi Portafolio</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Desarrollador Web</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .navbar {
+            background-color: #343a40;
+        }
+        .navbar-brand {
+            color: #fff !important;
+        }
+        .jumbotron {
+            background-image: url('tu-imagen.jpg');
+            background-size: cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        .project-card {
+            margin-bottom: 30px;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+    </style>
 </head>
 <body>
-  <h1>Mi Portafolio</h1>
 
-  <h2>Educación</h2>
-  <p>Aquí puedes escribir tu información educativa.</p>
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Mi Portafolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <h2>Presentación</h2>
-  <p>Aquí puedes escribir una breve presentación sobre ti.</p>
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">¡Hola! Soy un Desarrollador Web</h1>
+            <p class="lead">Me especializo en la creación de sitios web modernos y funcionales</p>
+            <a href="#projects" class="btn btn-primary btn-lg">Ver mis proyectos</a>
+        </div>
+    </div>
 
-  <h2>Proyectos</h2>
-  <ul>
-    <li><a href="proyecto1.html">Proyecto 1</a></li>
-    <li><a href="proyecto2.html">Proyecto 2</a></li>
-    <li><a href="proyecto3.html">Proyecto 3</a></li>
-  </ul>
+    <!-- Sección: Sobre mí -->
+    <section id="about" class="container my-5">
+        <h2 class="text-center mb-4">Sobre mí</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="mi-foto.jpg" class="img-fluid rounded" alt="Foto de perfil">
+            </div>
+            <div class="col-md-6">
+                <p>Soy un desarrollador web con experiencia en tecnologías como HTML, CSS, JavaScript y frameworks como Bootstrap y React. Me apasiona crear soluciones innovadoras que mejoren la experiencia del usuario.</p>
+                <p>Mi objetivo es seguir aprendiendo y desarrollando habilidades en el mundo de la tecnología mientras contribuyo a proyectos que tienen un impacto positivo.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- Sección: Proyectos -->
+    <section id="projects" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Proyectos</h2>
+            <div class="row">
+                <!-- Proyecto 1 -->
+                <div class="col-md-4 project-card">
+                    <div class="card">
+                        <img src="proyecto1.jpg" class="card-img-top" alt="Proyecto 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 1</h5>
+                            <p class="card-text">Descripción breve del proyecto 1.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 2 -->
+                <div class="col-md-4 project-card">
+                    <div class="card">
+                        <img src="proyecto2.jpg" class="card-img-top" alt="Proyecto 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 2</h5>
+                            <p class="card-text">Descripción breve del proyecto 2.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Proyecto 3 -->
+                <div class="col-md-4 project-card">
+                    <div class="card">
+                        <img src="proyecto3.jpg" class="card-img-top" alt="Proyecto 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Proyecto 3</h5>
+                            <p class="card-text">Descripción breve del proyecto 3.</p>
+                            <a href="#" class="btn btn-primary">Ver más</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección: Contacto -->
+    <section id="contact" class="container my-5">
+        <h2 class="text-center mb-4">Contacto</h2>
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Nombre</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Tu nombre">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputEmail">Correo electrónico</label>
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Tu email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputMessage">Mensaje</label>
+                <textarea class="form-control" id="inputMessage" rows="5" placeholder="Escribe tu mensaje aquí"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2024 Tu Nombre. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS y dependencias -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
